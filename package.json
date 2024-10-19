@@ -1,0 +1,22 @@
+{
+  "name": "vite-monorepo-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:ol": "pnpm -F ./packages/open-layers dev",
+    "build:ol": "pnpm -F ./packages/open-layers vue-tsc -b && build",
+    "preview:ol": "pnpm -F ./packages/open-layers preview"
+  },
+  "dependencies": {
+    "sass": "^1.80.3",
+    "vue": "^3.5.10",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
+  }
+}
