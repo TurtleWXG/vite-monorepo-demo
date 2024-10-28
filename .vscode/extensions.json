@@ -3,6 +3,7 @@
     "Vue.volar", // vue语法
     "editorconfig.editorconfig", // 编码统一风格
     "dbaeumer.vscode-eslint", // eslint 检查
-    "esbenp.prettier-vscode" // 格式化
+    "esbenp.prettier-vscode", // 格式化
+    "antfu.unocs" // unocss 支持
   ]
 }

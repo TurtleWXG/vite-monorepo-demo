@@ -42,7 +42,7 @@ onMounted(() => {
         style: new Style({
           renderer(coordinates, state) {
             const { context } = state
-            const geometry = state.geometry.clone()
+            const geometry: any = state.geometry.clone()
 
             geometry.setCoordinates(coordinates)
 

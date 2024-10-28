@@ -5,7 +5,9 @@ import pluginVue from 'eslint-plugin-vue'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,vue}'] },
+  {
+    files: ['**/*.{js,mjs,cjs,ts,vue}'],
+  },
   {
     languageOptions: {
       globals: globals.browser,
@@ -26,6 +28,8 @@ export default [
       'vue/multi-word-component-names': ['warn', { ignores: ['index'] }],
       // vue 组件中使用了未声明的属性
       '@typescript-eslint/no-unused-vars': 'warn',
+      // vue 中使用 any 类型
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
   // 最后面的配置会覆盖前面的配置
