@@ -6,7 +6,9 @@
   "scripts": {
     "dev:ol": "pnpm -F ./packages/open-layers dev",
     "build:ol": "pnpm -F ./packages/open-layers vue-tsc -b && build",
-    "preview:ol": "pnpm -F ./packages/open-layers preview"
+    "preview:ol": "pnpm -F ./packages/open-layers preview",
+    "lint": "pnpm exec prettier -w './packages/**/src/**/*.{ts,tsx,js,vue}'",
+    "lint:eslint": "pnpm exec eslint --fix ./packages/**/src/**/*.{ts,tsx,js,vue}"
   },
   "dependencies": {
     "sass": "^1.80.3",
@@ -14,8 +16,15 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@vitejs/plugin-vue": "^5.1.4",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.29.1",
+    "globals": "^15.11.0",
+    "prettier": "3.3.3",
     "typescript": "^5.5.3",
+    "typescript-eslint": "^8.11.0",
     "vite": "^5.4.8",
     "vue-tsc": "^2.1.6"
   }
