@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev:ol": "pnpm -F ./packages/open-layers dev",
     "build:ol": "pnpm -F ./packages/open-layers vue-tsc -b && build",
     "preview:ol": "pnpm -F ./packages/open-layers preview",
@@ -27,5 +28,9 @@
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.8",
     "vue-tsc": "^2.1.6"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.0.0",
+    "pnpm": ">=9.0.0"
   }
 }
