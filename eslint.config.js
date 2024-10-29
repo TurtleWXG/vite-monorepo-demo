@@ -26,9 +26,14 @@ export default [
     rules: {
       // vue 组件名称驼峰规范
       'vue/multi-word-component-names': ['warn', { ignores: ['index'] }],
-      // vue 组件中使用了未声明的属性
+    },
+  },
+  {
+    files: ['**/*.{vue,ts,tsx}'],
+    rules: {
+      // 声明的属性未使用
       '@typescript-eslint/no-unused-vars': 'warn',
-      // vue 中使用 any 类型
+      // 使用 any 类型
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
