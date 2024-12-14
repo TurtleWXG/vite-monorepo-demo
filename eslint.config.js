@@ -36,6 +36,11 @@ export default [
       // 使用 any 类型
       '@typescript-eslint/no-explicit-any': 'warn',
     },
+    global: {
+      ElMessage: 'readonly',
+      ElMessageBox: 'readonly',
+      ElNotification: 'readonly',
+    },
   },
   // 最后面的配置会覆盖前面的配置
   eslintConfigPrettier,

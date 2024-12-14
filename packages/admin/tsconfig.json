@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "types": ["element-plus/global"],
+    "paths": {
+      "@admin/*": ["./packages/admin/src/*"]
+    }
+  },
+  "files": [],
+  "references": [{ "path": "../../tsconfig.app.json" }, { "path": "../../tsconfig.node.json" }]
+}
