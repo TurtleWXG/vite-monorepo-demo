@@ -64,5 +64,9 @@ export default defineConfig(({ mode }) => {
         },
       ],
     },
+    optimizeDeps: {
+      include: ['axios', 'lodash-es', 'dayjs', 'pinia', 'nprogress', 'ts-md5'],
+      exclude: ['@iconify/json'],
+    },
   }
 })
