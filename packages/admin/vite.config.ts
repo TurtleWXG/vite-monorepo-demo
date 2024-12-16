@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
         dts: 'src/auto-components.d.ts',
         resolvers: [
           ElementPlusResolver({
-            importStyle: isBuild ? 'css' : false,
+            importStyle: isBuild ? 'css' : 'sass',
           }),
         ],
       }),
@@ -48,6 +48,7 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
+          additionalData: `@use "@admin/styles/element-plus/index.scss" as *;`,
           // 解决警告 Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
           api: 'modern-compiler',
         },
