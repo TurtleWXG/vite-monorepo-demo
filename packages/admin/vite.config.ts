@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
         dts: 'src/auto-components.d.ts',
         resolvers: [
           ElementPlusResolver({
-            importStyle: isBuild ? 'css' : 'sass',
+            importStyle: isBuild ? 'sass' : false,
           }),
         ],
       }),
@@ -38,8 +38,10 @@ export default defineConfig(({ mode }) => {
 
           return `${code};${
             isBuild
-              ? `import 'element-plus/theme-chalk/el-message-box.css';import 'element-plus/theme-chalk/el-message.css';import 'element-plus/theme-chalk/el-notification.css';`
-              : `import 'element-plus/dist/index.css';`
+              ? "import 'element-plus/theme-chalk/src/message-box.scss';" +
+                "import 'element-plus/theme-chalk/src/message.scss';" +
+                "import 'element-plus/theme-chalk/src/notification.scss';"
+              : "import 'element-plus/theme-chalk/src/index.scss';"
           }`
         },
       },
@@ -57,8 +59,8 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [
         {
-          find: /@admin\//,
-          replacement: `${pathResolve('packages/admin/src')}/`,
+          find: /@admin/,
+          replacement: `${pathResolve('src')}/`,
         },
       ],
     },
