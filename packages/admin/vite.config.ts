@@ -5,8 +5,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
-import { pathResolve } from '../../build'
 import { loadEnv } from 'vite'
+import { monorepoResolver } from '../../build'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -45,14 +45,18 @@ export default defineConfig(({ mode }) => {
           }`
         },
       },
-      ElementPlus({}),
+      ElementPlus({
+        useSource: true,
+      }),
     ],
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "@admin/styles/element-plus/index.scss" as *;`,
-          // 解决警告 Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
           api: 'modern-compiler',
+          additionalData:
+            '@use "@admin/styles/mixin.scss" as *;' +
+            '@use "@admin/styles/variable.scss" as *;' +
+            '@use "@admin/styles/element-plus/index.scss" as *;',
         },
       },
     },
@@ -60,9 +64,14 @@ export default defineConfig(({ mode }) => {
       alias: [
         {
           find: /@admin/,
-          replacement: `${pathResolve('src')}/`,
+          replacement: `${monorepoResolver('admin')}/`,
+        },
+        {
+          find: /@base-lib/,
+          replacement: `${monorepoResolver('base-lib')}/`,
         },
       ],
+      extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json', '.scss', '.css'],
     },
     optimizeDeps: {
       include: ['axios', 'lodash-es', 'dayjs', 'pinia', 'nprogress', 'ts-md5'],

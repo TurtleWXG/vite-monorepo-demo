@@ -1,0 +1,6 @@
+/** 超出长度以省略号显示 */
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

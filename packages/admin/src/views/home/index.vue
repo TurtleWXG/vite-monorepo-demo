@@ -18,7 +18,8 @@ onMounted(() => {
     home
     <el-input v-model="input" style="width: 240px" placeholder="Please input" />
     <el-date-picker v-model="input" type="date" placeholder="Pick a day" />
+    <el-button type="primary">111</el-button>
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

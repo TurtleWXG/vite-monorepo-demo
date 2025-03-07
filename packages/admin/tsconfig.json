@@ -12,10 +12,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["element-plus/global"],
-    "paths": {
-      "@admin/*": ["./packages/admin/src/*"]
-    }
+    "types": ["element-plus/global"]
   },
   "vueCompilerOptions": {
     "target": 3
