@@ -1,4 +1,4 @@
-import { App, Plugin } from 'vue'
+import { Plugin } from 'vue'
 import { createRouter, createWebHistory, Router } from 'vue-router'
 
 export const router = createRouter({
@@ -11,6 +11,10 @@ export const router = createRouter({
     {
       path: '/map',
       component: () => import('../views/map/index.vue'),
+    },
+    {
+      path: '/arc-arrangement',
+      component: () => import('../views/arc-arrangement/index.vue'),
     },
   ],
 })
