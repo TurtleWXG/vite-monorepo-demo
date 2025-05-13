@@ -25,7 +25,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
+    "@gx-web/eslint-config": "^2.0.1",
     "@gx-web/prettier-config": "^1.0.1",
     "@iconify/json": "^2.2.265",
     "@types/lodash-es": "^4.17.12",
@@ -33,13 +33,11 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "code-inspector-plugin": "^0.20.10",
     "eslint": "^9.22.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.29.1",
     "globals": "^15.11.0",
     "prettier": "3.3.3",
     "sass": "^1.85.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.11.0",
+    "typescript-eslint": "^8.32.1",
     "unocss": "^66.1.1",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-element-plus": "^0.8.0",
