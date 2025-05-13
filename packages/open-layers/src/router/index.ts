@@ -16,6 +16,10 @@ export const router = createRouter({
       path: '/arc-arrangement',
       component: () => import('../views/arc-arrangement/index.vue'),
     },
+    {
+      path: '/full-view',
+      component: () => import('../views/full-view/index.vue'),
+    },
   ],
 })
 
