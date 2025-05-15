@@ -21,8 +21,7 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@admin/*": ["./packages/admin/src/*"],
-      "@base-lib/*": ["./packages/base-lib/src/*"]
+      "@mgmt/*": ["./packages/mgmt/src/*"]
     }
   },
   "include": ["packages/*/src", "types"]

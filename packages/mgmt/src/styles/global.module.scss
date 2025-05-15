@@ -1,0 +1,5 @@
+@use './variable.scss' as *;
+
+:export {
+  el-namespace: $el-namespace;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@vite-monorepo-demo/mgmt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "npm run ts:check && vite build",
+    "preview": "vite preview",
+    "ts:check": "vue-tsc --noEmit --skipLibCheck"
+  }
+}

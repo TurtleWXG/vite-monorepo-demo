@@ -8,6 +8,9 @@
     "ol:dev": "pnpm -F ./packages/open-layers dev",
     "ol:build": "pnpm -F ./packages/open-layers build",
     "ol:preview": "pnpm -F ./packages/open-layers preview",
+    "mgmt:dev": "pnpm -F ./packages/mgmt dev",
+    "mgmt:build": "pnpm -F ./packages/mgmt build",
+    "mgmt:preview": "pnpm -F ./packages/mgmt preview",
     "lint": "pnpm exec prettier -w './packages/**/src/**/*.{ts,tsx,js,vue}'",
     "lint:eslint": "pnpm exec eslint --fix ./packages/**/src/**/*.{ts,tsx,js,vue}"
   },
