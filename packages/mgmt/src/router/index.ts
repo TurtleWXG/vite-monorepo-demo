@@ -1,6 +1,7 @@
-import { Plugin } from 'vue'
-import { createRouter, createWebHistory, Router } from 'vue-router'
-import { Layout } from '../layout'
+import { createRouter, createWebHistory } from 'vue-router'
+import { Layout } from '@mgmt/layout'
+
+export * from './util'
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -11,17 +12,11 @@ export const router = createRouter({
       component: Layout,
       children: [
         {
-          path: 'home',
           name: 'Home',
+          path: 'home',
           component: () => import('@mgmt/views/home/index.vue')
         }
       ]
     }
   ]
-})
-
-export const setupRouter = (router: Router): Plugin => ({
-  install: (app) => {
-    app.use(router)
-  }
 })

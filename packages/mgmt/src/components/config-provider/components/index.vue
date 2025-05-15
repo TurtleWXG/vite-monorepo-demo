@@ -2,8 +2,12 @@
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import variable from '@mgmt/styles/global.module.scss'
 
+defineOptions({
+  name: 'ConfigProvider'
+})
+
 const { namespace = variable['el-namespace'] } = defineProps<{
-  namespace: string
+  namespace?: string
 }>()
 </script>
 
