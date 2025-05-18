@@ -22,7 +22,9 @@
 
     "paths": {
       "@mgmt/*": ["./packages/mgmt/src/*"]
-    }
+    },
+
+    "types": ["vite-svg-loader"]
   },
   "include": ["packages/*/src", "types"]
 }

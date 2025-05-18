@@ -7,6 +7,7 @@ import ElementPlus from 'unplugin-element-plus/vite'
 import type { PluginOption } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { codeInspectorPlugin } from 'code-inspector-plugin'
+import svgLoader from 'vite-svg-loader'
 
 export function getPluginsList(mode: string): PluginOption[] {
   const isBuild = mode === 'production'
@@ -48,6 +49,8 @@ export function getPluginsList(mode: string): PluginOption[] {
     } satisfies PluginOption,
     ElementPlus({
       useSource: true
-    })
+    }),
+    // svg组件化支持
+    svgLoader()
   ]
 }
