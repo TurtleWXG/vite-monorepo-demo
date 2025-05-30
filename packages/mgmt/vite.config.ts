@@ -5,11 +5,10 @@ import { getPluginsList } from '../../build/plugins'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const _isBuild = mode === 'production'
-  const _env = loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, process.cwd(), '').NODE_ENV
 
   return {
-    plugins: <PluginOption[]>[...getPluginsList(mode)],
+    plugins: <PluginOption[]>[...getPluginsList(env)],
     css: {
       preprocessorOptions: {
         scss: {

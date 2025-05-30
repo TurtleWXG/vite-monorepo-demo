@@ -10,3 +10,5 @@ export function monorepoResolver(pkgName: string) {
 export function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir)
 }
+
+export const isDev = (env: string) => env === 'development'

@@ -8,10 +8,9 @@ import type { PluginOption } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { codeInspectorPlugin } from 'code-inspector-plugin'
 import svgLoader from 'vite-svg-loader'
+import { isDev } from './util'
 
-export function getPluginsList(mode: string): PluginOption[] {
-  const isBuild = mode === 'production'
-
+export function getPluginsList(env: string): PluginOption[] {
   return [
     vue(),
     vueDevTools(),
@@ -29,7 +28,7 @@ export function getPluginsList(mode: string): PluginOption[] {
       dts: 'src/auto-components.d.ts',
       resolvers: [
         ElementPlusResolver({
-          importStyle: isBuild ? 'sass' : false
+          importStyle: isDev(env) ? false : 'sass'
         })
       ]
     }),
@@ -39,11 +38,11 @@ export function getPluginsList(mode: string): PluginOption[] {
         if (!/src\/main.ts$/.test(id)) return
 
         return `${code};${
-          isBuild
-            ? "import 'element-plus/theme-chalk/src/message-box.scss';" +
+          isDev(env)
+            ? "import 'element-plus/theme-chalk/src/index.scss';"
+            : "import 'element-plus/theme-chalk/src/message-box.scss';" +
               "import 'element-plus/theme-chalk/src/message.scss';" +
               "import 'element-plus/theme-chalk/src/notification.scss';"
-            : "import 'element-plus/theme-chalk/src/index.scss';"
         }`
       }
     } satisfies PluginOption,
