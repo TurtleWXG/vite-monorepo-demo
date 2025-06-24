@@ -43,8 +43,8 @@ importers:
         version: 4.4.5(vue@3.5.12(typescript@5.6.3))
     devDependencies:
       '@gx-web/eslint-config':
-        specifier: ^2.0.1
-        version: 2.0.1(eslint@9.26.0(jiti@2.4.2))(prettier@3.3.3)(typescript@5.6.3)
+        specifier: ^2.0.2
+        version: 2.0.2(eslint@9.26.0(jiti@2.4.2))(prettier@3.3.3)(typescript@5.6.3)
       '@gx-web/prettier-config':
         specifier: ^1.0.1
         version: 1.0.1(prettier@3.3.3)
@@ -519,8 +519,8 @@ packages:
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
-  '@gx-web/eslint-config@2.0.1':
-    resolution: {integrity: sha512-AC/4dsANxBbJnT84y6dJBxYzU0fUCNTtuuQO5CGF48QFM6Zzjc5eZdjgQKpQQjovrjm2yI0gaXEYgYOR0KVPOg==}
+  '@gx-web/eslint-config@2.0.2':
+    resolution: {integrity: sha512-PFKG/JJLLWspc7cm8b3adMYaeMGMom2j64KrQnFQ+LF7zFmlLkOFzNsgFKf5385tn348nE06XZFp2R9vA4UKoQ==}
     peerDependencies:
       eslint: ^9.22.0
       prettier: ^3.3.3
@@ -3304,7 +3304,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@gx-web/eslint-config@2.0.1(eslint@9.26.0(jiti@2.4.2))(prettier@3.3.3)(typescript@5.6.3)':
+  '@gx-web/eslint-config@2.0.2(eslint@9.26.0(jiti@2.4.2))(prettier@3.3.3)(typescript@5.6.3)':
     dependencies:
       '@eslint/js': 9.26.0
       eslint: 9.26.0(jiti@2.4.2)

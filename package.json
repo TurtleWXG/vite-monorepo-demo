@@ -28,7 +28,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@gx-web/eslint-config": "^2.0.1",
+    "@gx-web/eslint-config": "^2.0.2",
     "@gx-web/prettier-config": "^1.0.1",
     "@iconify/json": "^2.2.265",
     "@types/lodash-es": "^4.17.12",
