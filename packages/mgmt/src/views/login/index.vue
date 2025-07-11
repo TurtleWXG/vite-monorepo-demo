@@ -1,19 +1,17 @@
 <script setup lang="ts">
 // import { ThemeSwitch } from '../../components/ThemeSwitch'
 // import { LocaleDropdown } from '../../components/LocaleDropdown'
-// import { useI18n } from '../../hooks/web/useI18n'
-// import { underlineToHump } from '../../utils'
-// import { useAppStore } from '../../store/modules/app'
 import { useDesign } from '@mgmt/hooks'
-// import { LoginForm } from './components'
+import { PasswordForm } from './components'
 
 const { getPrefixCls } = useDesign()
 
 const prefixCls = getPrefixCls('login')
 
-// const appStore = useAppStore()
-
-// const { t } = useI18n()
+const loginCb = (form) => {
+  console.log('loginCb => form:', form)
+  return Promise.resolve()
+}
 </script>
 
 <template>
@@ -52,14 +50,17 @@ const prefixCls = getPrefixCls('login')
 
           <div class="flex justify-end items-center space-x-10px">
             <!-- <ThemeSwitch /> -->
-            <!-- <LocaleDropdown class="<xl:text-white dark:text-white" /> -->
+            <!-- <LocaleDropdown class="lt-xl:text-white dark:text-white" /> -->
           </div>
         </div>
         <Transition appear enter-active-class="animate__animated animate__bounceInRight">
           <div
             class="h-full flex items-center m-auto w-[100%] at-2xl:max-w-500px at-xl:max-w-500px at-md:max-w-500px at-lg:max-w-500px"
           >
-            <!-- <LoginForm class="p-20px h-auto m-auto <xl:(rounded-3xl light:bg-white)" /> -->
+            <PasswordForm
+              :login="loginCb"
+              class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:bg-white"
+            ></PasswordForm>
           </div>
         </Transition>
       </div>
