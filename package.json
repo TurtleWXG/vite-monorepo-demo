@@ -15,7 +15,7 @@
     "lint:eslint": "pnpm exec eslint --fix ./packages/**/src/**/*.{ts,tsx,js,vue}"
   },
   "dependencies": {
-    "@gx-web/tool": "^1.1.6",
+    "@gx-web/tool": "^1.1.7",
     "animate.css": "^4.1.1",
     "axios": "^1.7.7",
     "dayjs": "^1.11.13",

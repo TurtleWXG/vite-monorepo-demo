@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@gx-web/tool':
-        specifier: ^1.1.6
-        version: 1.1.6(axios@1.7.7)(vue@3.5.12(typescript@5.6.3))
+        specifier: ^1.1.7
+        version: 1.1.7(axios@1.7.7)(vue@3.5.12(typescript@5.6.3))
       animate.css:
         specifier: ^4.1.1
         version: 4.1.1
@@ -570,8 +570,8 @@ packages:
       prettier: ^3.3.3
       stylelint: ^16.6.1
 
-  '@gx-web/tool@1.1.6':
-    resolution: {integrity: sha512-wZGauy06IUtAJueIb6AQwO7QeTpdEBuIRgIL/PacUARIFvcwGm973GN1CK5hdMLMnejTmwgfI+8ljeqns9rmjQ==}
+  '@gx-web/tool@1.1.7':
+    resolution: {integrity: sha512-oBL1V4XOX2ILQi01SVl4SCf0r0Q4Y0tgP1dYU6UnMl2asXpDi34vUY94mwsubHMlbCDYV77h2UCWbCXeCj482g==}
     peerDependencies:
       axios: '*'
       vue: ^3.3.0
@@ -4785,7 +4785,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@gx-web/tool@1.1.6(axios@1.7.7)(vue@3.5.12(typescript@5.6.3))':
+  '@gx-web/tool@1.1.7(axios@1.7.7)(vue@3.5.12(typescript@5.6.3))':
     dependencies:
       axios: 1.7.7
       crypto-js: 4.2.0
