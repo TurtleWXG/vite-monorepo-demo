@@ -3,14 +3,26 @@
 // import { LocaleDropdown } from '../../components/LocaleDropdown'
 import { useDesign } from '@mgmt/hooks'
 import { PasswordForm } from './components'
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '@mgmt/store'
+
+const router = useRouter()
 
 const { getPrefixCls } = useDesign()
 
 const prefixCls = getPrefixCls('login')
 
+const AuthStore = useAuthStore()
+
 const loginCb = (form) => {
   console.log('loginCb => form:', form)
-  return Promise.resolve()
+  return new Promise<void>((resolve) => {
+    AuthStore.setStore({
+      access_token: '1111'
+    })
+    router.replace('/')
+    resolve()
+  })
 }
 </script>
 

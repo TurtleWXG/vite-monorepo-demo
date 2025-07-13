@@ -5,8 +5,8 @@ const { VITE_HIDE_HOME } = import.meta.env
 
 export default [
   {
-    path: '/',
     name: 'Home',
+    path: '/',
     component: Layout,
     redirect: '/welcome',
     meta: {

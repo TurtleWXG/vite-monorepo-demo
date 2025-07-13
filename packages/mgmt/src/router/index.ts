@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { setupRouterPerm } from './permission'
 
 export * from './util'
 
@@ -38,3 +39,5 @@ export const router = createRouter({
   /** 当在页面之间导航时控制滚动的功能 */
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
+
+setupRouterPerm(router)
