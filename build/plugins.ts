@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -14,8 +15,14 @@ export function getPluginsList(env: string): PluginOption[] {
   return [
     /**
      * 提供 Vue 3 单文件组件支持
+     * https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue
      */
     vue(),
+    /**
+     * 提供 Vue 3 JSX 支持
+     * https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue-jsx
+     */
+    vueJsx(),
     /**
      * 添加 Vue DevTools 支持
      * https://devtools-next.vuejs.org/guide/vite-plugin

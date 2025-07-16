@@ -1,4 +1,4 @@
-import { Layout } from '@mgmt/layout'
+import Layout from '@mgmt/layout/Layout.vue'
 import { RouteRecordRaw } from 'vue-router'
 
 const { VITE_HIDE_HOME } = import.meta.env
